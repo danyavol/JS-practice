@@ -1,7 +1,7 @@
 // Сделать ввод матрицы по спирали (начиная с левого верхнего угла, по часовой стрелке)
 'use strict'
 // Ввод размерности матрицы
-var w = 4;//randomInteger(3, 10);
+var w = 3;//randomInteger(3, 10);
 var h = 4;//randomInteger(3, 10);
 
 // Заполнение матрицы пустыми значениями
@@ -21,13 +21,22 @@ for (var i = 0; i < w*h; i++) {
 }
 str += array.join(' ');
 console.log(str);
+array.reverse();
 
 // Заполнение матрицы спиралью
 var count = getCircleCount(matrix);
+console.log('count = '+count);
 for (let k = 0; k < count; k++) {
   let ind = getPerimeterElems(matrix,k);
-   
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (ifExistsInArray(ind, i, j)) {
+        matrix[i][j] = array.pop();
+      }
+    }
+  }
 }
+console.log(matrix);
 
 
 function getCircleCount(array) {
