@@ -10,8 +10,8 @@ function randomInteger(min, max) {
 }
 
 // Ввод размерности матрицы
-var w = randomInteger(3, 8);
-var h = randomInteger(3, 8);
+var w = randomInteger(3, 10);
+var h = randomInteger(3, 10);
 
 // Ввод матрицы
 var array = [];
