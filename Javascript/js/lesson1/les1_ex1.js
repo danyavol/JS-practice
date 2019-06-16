@@ -5,4 +5,5 @@ var z = +prompt("Введите z");
 if ( !isNaN(x) && !isNaN(y) && !isNaN(z) ) {
   var rez = x*x/4 + (x+y)/8 + x*x*x/(y-z);
   console.log("x = "+x+ "\ny = "+y+ "\nz = "+z+ "\nrez = "+rez);
+  //console.log(`x = ${x}\ny = ${y}\nz = ${z}\nrez = ${rez}`);
 } else alert("Вы ввели не число");
