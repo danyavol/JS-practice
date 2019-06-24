@@ -1,0 +1,13 @@
+.tab {
+  width: 200px;
+  height: 27px;
+  border: 1px solid black;
+  margin-bottom: 3px;
+}
+
+.text {
+  margin-left: 10px;
+  width: 180px;
+  min-height: 10px;
+  display: none;
+}
