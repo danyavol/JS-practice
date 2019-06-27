@@ -12,3 +12,15 @@ td {
 .active {
   background: yellow;
 }
+
+.mainDiag {
+  background: green;
+}
+
+.secondDiag {
+  background: red;
+}
+
+.perimetr {
+  background: blue;
+}

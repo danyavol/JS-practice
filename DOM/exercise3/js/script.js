@@ -95,9 +95,11 @@ window.onload = function () {
                   }
                 }
                 if (flag2) {
-                  table.rows[i].cells[j].className = "active";
-                  summa += +table.rows[i].cells[j].innerText;
-                  sum.innerText = `Сумма: ${summa}`;
+                  if (table.rows[i].cells[j].className == "") {
+                    table.rows[i].cells[j].className = "active";
+                    summa += +table.rows[i].cells[j].innerText;
+                    sum.innerText = `Сумма: ${summa}`;
+                  }
                 }
 
               }
