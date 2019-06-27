@@ -2,6 +2,7 @@ td {
   width: 30px;
   height: 30px;
   border: 1px solid black;
+  text-align: center;
 }
 
 #table {

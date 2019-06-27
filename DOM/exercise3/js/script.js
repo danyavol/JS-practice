@@ -76,39 +76,99 @@ window.onload = function () {
             prevElem = [cell[0],cell[1]];
 
           } else if (event.shiftKey) {
-            
-            var flag1 = true;
-            for (var i = prevElem[0]; i < cell[0] + 1; i++) {
-              for (var j = 0; j < table.rows[0].cells.length; j++) {
 
-                if (flag1) {
-                  j = prevElem[1];
-                  flag1 = false;
-                }
-                if (j == cell[1]+1 && i == cell[0]) break;
 
-                var flag2 = true;
-                for (var k = 0; k < arrayD.length; k++) {
-                  if ( (arrayD[k][0] == i) && (arrayD[k][1] == j) ) {
-                    flag2 = false;
-                  }
-                }
-                if (flag2) {
-                  if (table.rows[i].cells[j].className == "") {
-                    table.rows[i].cells[j].className = "active";
-                    summa += +table.rows[i].cells[j].innerText;
-                    sum.innerText = `Сумма: ${summa}`;
+            if (cell[0] > prevElem[0] || (cell[0] == prevElem[0] && cell[1] > prevElem[1])) {
+
+                // Удаление всех элементов
+                for (var i = 0; i < table.rows.length; i++) {
+                  for (var j = 0; j < table.rows[i].cells.length; j++) {
+                    var flag1 = true;
+                    for (var k = 0; k < arrayD.length; k++) {
+                      if ((arrayD[k][0] == i) && (arrayD[k][1] == j)) {
+                        flag1 = false;
+                      }
+                    }
+                    if (flag1) table.rows[i].cells[j].className = "";
                   }
                 }
 
-              }
+                var flag1 = true;
+                for (var i = prevElem[0]; i < cell[0] + 1; i++) {
+                  for (var j = 0; j < table.rows[0].cells.length; j++) {
+
+                    if (flag1) {
+                      j = prevElem[1];
+                      flag1 = false;
+                    }
+                    if (j == cell[1]+1 && i == cell[0]) break;
+
+                    var flag2 = true;
+                    for (var k = 0; k < arrayD.length; k++) {
+                      if ( (arrayD[k][0] == i) && (arrayD[k][1] == j) ) {
+                        flag2 = false;
+                      }
+                    }
+                    if (flag2) {
+                      if (table.rows[i].cells[j].className == "") {
+                        table.rows[i].cells[j].className = "active";
+                        summa += +table.rows[i].cells[j].innerText;
+                        sum.innerText = `Сумма: ${summa}`;
+                      }
+                    }
+
+                  }
+                }
+            } else {
+
+                // Удаление всех элементов
+                for (var i = 0; i < table.rows.length; i++) {
+                  for (var j = 0; j < table.rows[i].cells.length; j++) {
+                    var flag1 = true;
+                    for (var k = 0; k < arrayD.length; k++) {
+                      if ((arrayD[k][0] == i) && (arrayD[k][1] == j)) {
+                        flag1 = false;
+                      }
+                    }
+                    if (flag1) table.rows[i].cells[j].className = "";
+                  }
+                }
+
+                var flag1 = true;
+                for (var i = prevElem[0]; i >= cell[0]; i--) {
+                  for (var j = table.rows[0].cells.length - 1; j >= 0; j--) {
+
+                    if (flag1) {
+                      j = prevElem[1];
+                      flag1 = false;
+                    }
+                    if (j == cell[1]-1 && i == cell[0]) break;
+
+                    var flag2 = true;
+                    for (var k = 0; k < arrayD.length; k++) {
+                      if ( (arrayD[k][0] == i) && (arrayD[k][1] == j) ) {
+                        flag2 = false;
+                      }
+                    }
+                    if (flag2) {
+                      if (table.rows[i].cells[j].className == "") {
+                        table.rows[i].cells[j].className = "active";
+                        summa += +table.rows[i].cells[j].innerText;
+                        sum.innerText = `Сумма: ${summa}`;
+                      }
+                    }
+
+                  }
+                }
             }
+
 
           } else {
 
 
             summa = +this.innerText;
             sum.innerText = `Сумма: ${summa}`;
+            // Удаление всех элементов
             for (var i = 0; i < table.rows.length; i++) {
               for (var j = 0; j < table.rows[i].cells.length; j++) {
                 var flag1 = true;
