@@ -93,6 +93,7 @@ window.onload = function () {
                   }
                 }
 
+                summa = 0;
                 var flag1 = true;
                 for (var i = prevElem[0]; i < cell[0] + 1; i++) {
                   for (var j = 0; j < table.rows[0].cells.length; j++) {
@@ -134,6 +135,7 @@ window.onload = function () {
                   }
                 }
 
+                summa = 0;
                 var flag1 = true;
                 for (var i = prevElem[0]; i >= cell[0]; i--) {
                   for (var j = table.rows[0].cells.length - 1; j >= 0; j--) {
