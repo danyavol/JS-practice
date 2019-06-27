@@ -1,6 +1,5 @@
 'use strict'
 window.onload = function () {
-
   var arrayD = []; // массив содержащий координаты элементов-исключений(диагональных элементов)
   var s = 0, s2 = 0;
 
@@ -9,21 +8,21 @@ window.onload = function () {
       table.rows[i].cells[j].innerText = randomInteger(1,10);
       if (i == j) { // главная диагональ
         arrayD.push([i,j]);
-        table.rows[i].cells[j].style.background = "red";
+        table.rows[i].cells[j].className = "mainDiag";
 
         s += +table.rows[i].cells[j].innerText;
         sumM.innerText = `Сумма главной диагонали: ${s}`;
       }
       if (j == table.rows[i].cells.length - 1 - i) { // побочная диагональ
         arrayD.push([i,j]);
-        table.rows[i].cells[j].style.background = "green";
+        table.rows[i].cells[j].className = "secondDiag";
 
         s2 += +table.rows[i].cells[j].innerText;
         sumP.innerText = `Сумма побочной диагонали: ${s2}`;
       }
       if ((i == 0) || (i == table.rows.length-1) || (j == 0) || (j == table.rows[0].cells.length-1)) {
         arrayD.push([i,j]);
-        table.rows[i].cells[j].style.background = "skyblue";
+        table.rows[i].cells[j].className = "perimetr";
       }
     }
   }
@@ -77,13 +76,13 @@ window.onload = function () {
             prevElem = [cell[0],cell[1]];
 
           } else if (event.shiftKey) {
-            event.preventDefault();
+            
             var flag1 = true;
             for (var i = prevElem[0]; i < cell[0] + 1; i++) {
               for (var j = 0; j < table.rows[0].cells.length; j++) {
 
                 if (flag1) {
-                  j = prevElem[1]+1;
+                  j = prevElem[1];
                   flag1 = false;
                 }
                 if (j == cell[1]+1 && i == cell[0]) break;
@@ -107,11 +106,18 @@ window.onload = function () {
 
           } else {
 
+
             summa = +this.innerText;
             sum.innerText = `Сумма: ${summa}`;
             for (var i = 0; i < table.rows.length; i++) {
               for (var j = 0; j < table.rows[i].cells.length; j++) {
-                table.rows[i].cells[j].classList = "";
+                var flag1 = true;
+                for (var k = 0; k < arrayD.length; k++) {
+                  if ((arrayD[k][0] == i) && (arrayD[k][1] == j)) {
+                    flag1 = false;
+                  }
+                }
+                if (flag1) table.rows[i].cells[j].className = "";
               }
             }
             this.className = "active";

@@ -14,13 +14,21 @@ td {
 }
 
 .mainDiag {
-  background: green;
-}
-
-.secondDiag {
   background: red;
 }
 
+.secondDiag {
+  background: green;
+}
+
 .perimetr {
-  background: blue;
+  background: skyblue;
+}
+
+.noselect {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
