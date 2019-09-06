@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercise1</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <form name="reg">
+        <div class="text-field">
+          <div>Логин:</div>
+          <div><input class="text_field" type="text" name="u_login" /></div>
+        </div>
+        <div class="text-field">
+          <div>Пароль:</div>
+          <div><input class="text_field" type="password" name="u_pass1" /></div>
+        </div>
+        <div class="text-field">
+          <div>Повторите пароль:</div>
+          <div><input class="text_field" type="password" name="u_pass2" /></div>
+        </div>
+        <div id="tech">
+          <div>
+            <input type="checkbox" name="css" value="0">CSS<br>
+            <input type="checkbox" name="js" value="1">JS<br>
+            <input type="checkbox" name="html" value="2">HTML<br>
+            <input type="checkbox" name="webpack" value="3">Webpack
+          </div>
+          <div>
+            <input type="checkbox" name="node" value="4">Node<br>
+            <input type="checkbox" name="mysql" value="5">MySQL<br>
+            <input type="checkbox" name="reactjs" value="6">ReactJS<br>
+            <input type="checkbox" name="angular" value="7">Angular
+          </div>
+        </div>
+        <div class="about">
+          <textarea id="message"></textarea><br>
+          <span id="count">0 / 300</span>
+        </div>
+        <input type="button" name="" value="Отправить" id="send" />
+    </form>
+    <script src="js/script.js"></script>
+  </body>
+</html>

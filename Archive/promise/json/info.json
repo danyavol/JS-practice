@@ -1,0 +1,24 @@
+[
+  {
+    "name":"title 1",
+    "desc":"title 2123",
+    "gallery":"/images/img1.jpg",
+    "price": 150,
+    "count" : 5
+
+  },
+  {
+    "name":"title 2",
+    "desc":"title 2123",
+    "gallery":"/images/img2.jpg",
+    "price": 350,
+    "count" : 2
+  },
+  {
+    "name":"title 3",
+    "desc":"title asdasd",
+    "gallery":"/images/img3.jpg",
+    "price": 350,
+    "count" : 2
+  }
+]

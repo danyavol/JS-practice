@@ -1,0 +1,16 @@
+[
+  {
+    "name":1,
+    "test":2,
+    "gallery":[
+      "/images/slider/slide1.jpg",
+      "/images/slider/slide2.jpg",
+      "/images/slider/slide3.jpg",
+      "/images/slider/slide4.jpg"
+    ]
+  },
+  {
+    "name":3,
+    "test":4
+  }
+]

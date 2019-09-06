@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+}
+
+#galleries {
+    display: flex;
+    background: #eee;
+    padding: 5px;
+}
+
+.gallery {
+    width: 50%;
+}
+
+.gallery ul {
+    min-height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery li img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin: 3px;
+}
+
+.gallery li {
+    list-style-type: none;
+    display: flex;
+}
+
+.test {
+    display: inline-block;
+}
+
+.test img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cont-test {
+    width: 500px;
+}

@@ -1,0 +1,48 @@
+form > table {
+  width: 100%;
+}
+
+form {
+}
+
+#tech {
+  display: flex;
+  margin: 11px 0px;
+}
+
+#tech > div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.text-field {
+  display: flex;
+  margin: 7px;
+}
+
+.text-field div:first-child {
+  width: 165px;
+}
+
+.about textarea {
+  width: 350px;
+  height: 110px;
+}
+
+.about {
+  margin: 10px 0 10px 7px;
+}
+
+.errorText {
+  color: red;
+  margin-left: 10px;
+}
+
+.error {
+  outline: 2px solid red;
+}
+
+#send {
+  padding: 10px;
+  margin: 20px;
+}

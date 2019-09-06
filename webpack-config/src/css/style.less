@@ -1,0 +1,43 @@
+.container {
+    > .top-title {
+        font-size: 24px;
+    }
+
+    > .side-title {
+        transform: rotate(90deg);
+        font-size: 24px;
+        transform-origin: left 1em 0;
+    }
+
+    > #plot {
+        margin-left: 40px;
+        min-width: 950px;
+
+        .row {
+            display: inline-block;
+        }
+
+        i.item {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin: 0 3px;
+        }
+
+        div.wrap {
+            display: inline-block;
+            min-width: 18px;
+            min-height: 18px;
+        }
+
+        #row0 .wrap {
+            background: yellow;
+        }
+    }
+}
+
+body {
+    background: #eee;
+}

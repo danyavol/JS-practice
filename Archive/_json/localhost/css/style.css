@@ -1,0 +1,34 @@
+html,body {
+  width: 100%;
+  height: 100%;
+
+}
+
+#buttons {
+  display: flex;
+}
+
+#buttons > div {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+
+#tovar {
+  display: flex;
+}
+
+#tovar > div{
+  padding: 5px;
+  border: 1px solid gray;
+  margin: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  outline: 2px solid red;
+}
